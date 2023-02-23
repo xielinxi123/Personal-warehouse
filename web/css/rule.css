@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/*初始化盒子边框*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #3498db;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+a:hover{
+    color: #ffc670;
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+    outline: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: #eee;
+    user-select: none;
+    border-radius: 4px;
+    padding: .8em 1.5em;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #556B2F;
+    opacity: 0.5;
+}
+
+.header .tabbar li{
+    padding: 10px 20px;
+    padding-top: 15px;
+    float: left;
+    list-style: none;
+    color: #fff;
+}
+
+.header .tabbar a{
+    text-decoration: none; /* 去除默认的下划线 */
+    outline: none;	/* 去除旧版浏览器的点击后的外虚线框 */
+    color: #fff;
+    font-size: 15px;
+}
+
+.header .tabbar li:hover {
+    border-bottom:4px solid #fff;
+}
+
+.header .tabbar a:hover{
+    color:gold;
+    opacity: 0.5;
+}

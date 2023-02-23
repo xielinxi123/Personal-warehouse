@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+td{
+    text-align: center;
+}
+
+a{
+    text-decoration:none;
+    color:#696969;
+}
+
+a:hover{
+    color:#F4A460;
+}
+
+input[type="submit"]{
+    color:#696969;
+}
+
+input[type="submit"]:hover{
+    color:#F4A460;
+}
+
+input[type="button"]{
+    color:#696969;
+}
+
+input[type="button"]:hover{
+    color:#F4A460;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="mysql.properties"/>
+
+    <environments default="development">
+        <environment id="development">
+            <!--
+            transactionManager用来配置事务管理
+            type中使用JDBC代表mybatis进行事务管理
+            type中使用Manager代表mybatis不进行事务管理
+            如果与spring进行整合的情况下，type中可以使用Manager选项
+            让spring来参与事务管理
+            -->
+            <transactionManager type="JDBC" />
+            <!--
+                dataSource用来配置数据库连接
+                UNPOOLED代表底层不使用连接池，每次都需要创建一个新的连接
+                用完后再释放该连接；会有一些基础属性设置：
+                driver url username password
+                defaultTransactionIsolationLevel(默认连接事务隔离级别)
+                defaultNetworkTimeout(连接超时时间)
+                POOLED代表使用连接池，每次从连接池中获取连接
+                当资源关闭时将连接返回连接池；
+                在正式项目中仍然会切换成第三方的连接池，例如C3p0；
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+        <!--        根据需要的生产或测试环境配置不同的数据库进行数据切换-->
+        <!--        <environment id="produce">-->
+        <!--            <transactionManager type=""></transactionManager>-->
+        <!--            <dataSource type=""></dataSource>-->
+        <!--        </environment>-->
+    </environments>
+
+    <!--    mapper映射器-->
+    <mappers>
+        <!--        <mapper resource="com/bestapply/dao/ProductMapper.xml"/>-->
+        <!--        如果使用package需要注意一定要使用接口-->
+        <!--        且接口的命名一定要和对应mapper的命名一致-->
+        <package name="com.xxxx.mapper"/>
+    </mappers>
+
+</configuration>

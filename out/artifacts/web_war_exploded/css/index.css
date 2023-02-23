@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/*初始化盒子边框*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color:#556B2F;
+    opacity: 0.5;
+}
+
+.header .tabbar li{
+    padding: 10px 20px;
+    padding-top: 15px;
+    float: left;
+    list-style: none;
+    color: #fff;
+}
+
+.header .tabbar a{
+    text-decoration: none; /* 去除默认的下划线 */
+	outline: none;	/* 去除旧版浏览器的点击后的外虚线框 */
+    color: #fff;
+}
+
+.header .tabbar li:hover {
+    border-bottom:4px solid #fff;
+}
+
+.header .tabbar a:hover{
+    color:gold;
+    opacity: 0.5;
+}
+
+.body{
+    width: 100%;
+    height: 590px;
+    background-image: url(../img/index2.png);
+    background-repeat: no-repeat;
+}
+
+.body .footer{
+    width: 100%;
+    height: 25px;
+    background-color: grey;
+    opacity: 0.5;
+    position:fixed;
+    bottom:0;
+}
+
+.body .title{
+    width: 500px;
+    height: 50px;
+    font-size: 50px;
+    font-family: 华文中宋;
+    font-weight: 700;
+    padding-left: 33%;
+    padding-top: 170px;
+}
+
+.body .goon{
+    padding-left: 45%;
+    padding-top: 120px;
+}
+
+.body .goon .goon_a{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;   
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.body .goon .goon_a:hover{
+    background-color: #3e8e41;
+}
+
+.body .goon .goon_a:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
